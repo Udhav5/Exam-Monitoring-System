@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Exam Monitoring System</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.9.0"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@vladmandic/face-api@1.0.2/dist/face-api.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>AI Based Exam Monitoring System</h1>
+    <video id="video" autoplay muted></video>
+
+    <div class="status">
+      <p id="statusMsg">Initializing camera...</p>
+      <p id="warningMsg">Warnings: 0 / 3</p>
+    </div>
+
+    <div id="exam-section">
+      <h2>Exam Area</h2>
+      <p>Answer your questions here...</p>
+      <textarea id="answerBox" placeholder="Start typing your answer..."></textarea>
+    </div>
+
+    <div id="cancel-screen" class="hidden">
+      <h2>Exam Cancelled ❌</h2>
+      <p>Too many rule violations detected.</p>
+    </div>
+  </div>
+</body>
+</html>
